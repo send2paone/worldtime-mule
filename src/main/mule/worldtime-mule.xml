@@ -18,6 +18,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 {
 	city : attributes.uriParams.city,
 	region : attributes.uriParams.region
+	
 }]]]></http:uri-params>
 		</http:request>
 	</flow>
