@@ -33,7 +33,8 @@
 				<configuration>
 					<cloudHubDeployment>					
 						<uri>https://anypoint.mulesoft.com</uri>
-						<server>FirstApplication</server>
+						<username>send2paone0820</username>
+						<password>Aashi2009</password>
 						<applicationName>WorldTimeZone</applicationName>					
 						<objectStoreV2>true</objectStoreV2>		
 						<muleVersion>4.3.0</muleVersion>
