@@ -31,18 +31,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>					
-					<uri>https://anypoint.mulesoft.com</uri>
-					<username>send2paone0820</username>
-					<password>Aashi2009</password>
-					<applicationName>WorldTimeZone</applicationName>					
-					<objectStoreV2>true</objectStoreV2>		
-					<muleVersion>4.3.0</muleVersion>
-					<workers>1</workers>
-					<workerType>Micro</workerType>
-					<environment>Sandbox</environment>
-					<businessGroup>Practice</businessGroup>									
-				</cloudHubDeployment>
+					<cloudHubDeployment>					
+						<uri>https://anypoint.mulesoft.com</uri>
+						<server>FirstApplication</server>
+						<applicationName>WorldTimeZone</applicationName>					
+						<objectStoreV2>true</objectStoreV2>		
+						<muleVersion>4.3.0</muleVersion>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<environment>Sandbox</environment>
+						<businessGroup>Practice</businessGroup>									
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
