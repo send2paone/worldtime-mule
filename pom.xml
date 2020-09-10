@@ -32,7 +32,7 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>					
-					<server>AnyPointPlatform</server>
+					<server>AnyPointServer</server>
 					<uri>https://anypoint.mulesoft.com</uri>
 					<applicationName>WorldTimeZone</applicationName>					
 					<objectStoreV2>true</objectStoreV2>		
