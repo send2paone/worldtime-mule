@@ -32,7 +32,8 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-					<uri>https://anypoint.mulesoft.com</uri>
+				<server>AnyPointPlatform</server>
+				<!--<uri>https://anypoint.mulesoft.com</uri>
 					<username>send2paone0820</username>
 					<environment>Sandbox</environment>
 					<businessGroup>Practice</businessGroup> 
@@ -41,7 +42,7 @@
 					<applicationName>WorldTimeZone-mule</applicationName>
 					<password>Aashi2009</password>
 					<muleVersion>4.3.0</muleVersion>
-					<objectStoreV2>true</objectStoreV2>
+					<objectStoreV2>true</objectStoreV2>-->					
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
