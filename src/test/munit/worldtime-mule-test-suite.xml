@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="worldtime-mule-test-suite.xml" />
+	<munit:test name="worldtime-mule-test-suite-worldtime-muleFlowTest" doc:id="a9134ca5-7bda-4ef0-b2e8-07ea79376ac5" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow Reference" doc:id="81767fcb-b25b-49bb-baf8-1bd9a03adb63" name="worldtime-mule-test-suiteFlow"/>
+			<flow-ref doc:name="Flow-ref to worldtime-muleFlow" doc:id="6569182a-89fc-4372-80d7-d3e6b66006e1" name="worldtime-muleFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="da25c7b1-1e5c-49b6-b7fe-ccac3c285910" message="payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="worldtime-mule-test-suite-worldtime-muleFlowTest1" doc:id="8e1178d3-9350-44f4-937f-f28ee01596ab" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow Reference" doc:id="4a7c382b-1739-4da2-b3a8-5b9a51377c0f" name="worldtime-mule-test-suiteFlow"/>
+			<flow-ref doc:name="Flow-ref to worldtime-muleFlow" doc:id="efc3c6a0-0233-46ee-bba1-2b353d7c8461" name="worldtime-muleFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="bc45c6f8-5c8b-41fb-801d-8edef825de5f" is="#[MunitTools::withMediaType('application/json')]" expression="#[payload]" message="Media type is wrong"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="worldtime-mule-test-suite-worldtime-muleFlowTest2" doc:id="0fe1d6dd-98f2-42b7-ba71-b89bfdf5a297" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow Reference" doc:id="0a1ffbeb-4c87-4047-8817-a071eb309052" name="worldtime-mule-test-suiteFlow"/>
+			<flow-ref doc:name="Flow-ref to worldtime-muleFlow" doc:id="76db9873-20a2-4472-a341-afcd0c609721" name="worldtime-muleFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="ef9ebe2b-0cae-4b67-8824-5d4d46a05925" is="#[MunitTools::equalTo(false)]" message="dst value is wrong" expression="#[payload.dst]"/>
+		</munit:validation>
+	</munit:test>
+	<flow name="worldtime-mule-test-suiteFlow" doc:id="72a25710-489a-4162-a307-e84e5c52eb4a">
+		<munit:set-event doc:name="Set Event" doc:id="5106e6d0-fbdb-47d7-a1f0-4f557ae19ec1">
+				<munit:attributes value="#[{uriParams:{region:'Asia',city:'Kolkata'}}]" />
+			</munit:set-event>
+	</flow>
+
+
+</mule>
